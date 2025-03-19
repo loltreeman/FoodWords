@@ -1,22 +1,33 @@
 .body {
-	background-color: #DD;
+	background-color: #DDD;
 }
 
 .div {
-	background-color: #EE;
+	background-color: #EEE;
 	margin: auto;
 	text-align: center;
 }
 
 .span {
-	background-color: #EE;
 	text-align: center;
-	max-width: 100px;
-	margin: auto
+	display: inline-block;
 }
 
 .a {
-	padding: 10px 10px;
+	width: 100%;
+	margin: 10px;
+}
+
+.ol {
+	text-align: center;
+	margin: auto;
 	max-width: 100px;
-	min-width: 100px;
+}
+
+.button {
+	background-color: #DDD; /* Green */
+	border: 1px solid #767676;
+	border-radius: 3px;
+	padding: 2px 7px;
+	text-align: center;
 }

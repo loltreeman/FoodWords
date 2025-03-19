@@ -59,20 +59,24 @@ export default function MainApp() {
 		</div>
 	)
 	
+	const mystyle = {
+		width: "10px",
+	}
+	
 	return (
 	<>
 		<div className="div">
 			<h1> Food Words </h1>
-			<span>
-				<Button text="<" onClick={() => changeIngredient(-1)} />
-				<a className="a"> {count + 1 + ". " + values[count].name } </a>
-				<Button text=">" onClick={() => changeIngredient(1)}/>
+			<span className="span">
+				<Button text="<" className="button" onClick={() => changeIngredient(-1)}/>
+				<span className="a"> { values[count].name } </span>
+				<Button text=">" className="button" onClick={() => changeIngredient(1)}/>
 			</span> <br/> <br/>
 			
-			<Button text={values[count].display ? "Remove" : "Add"} onClick={() => changeList(values[count].display) }/> <br/> <br/>
+			<Button text={values[count].display ? "Remove" : "Add"} className="button" onClick={() => changeList(values[count].display) }/> <br/> <br/>
 			
 			{list.length > 0 && (<h3> Added Ingredients </h3>)} 
-			<ol className="span">
+			<ol className="ol">
 			{ display }
 			</ol>
 		</div>
