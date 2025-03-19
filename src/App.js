@@ -59,10 +59,6 @@ export default function MainApp() {
 		</div>
 	)
 	
-	const mystyle = {
-		width: "10px",
-	}
-	
 	return (
 	<>
 		<div className="div">
