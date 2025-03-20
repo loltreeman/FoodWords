@@ -1,18 +1,26 @@
-.body {
-	background-color: #DDD;
+body {
+	color: #333;
+	background-color: #EEE;
+	
+	display: flex;
+	justify-content: center;
 }
 
 .div {
 	background-color: #DDD;
-	margin: auto;
 	text-align: center;
+	width: 500px;
+	margin: 10px 10px 10px 10px;
+	padding: 10px;
 }
 
 .div_ {
-	justify-content: center;
-	align-items: center;
 	display: flex;
 	width: 100%;
+	
+	justify-content: center;
+	align-items: center;
+	
 	text-align: center;
 }
 
@@ -27,26 +35,41 @@
 }
 
 .ol {
-	text-align: center;
 	margin: auto;
 	max-width: 100px;
 }
 
 .button {
+	color: #333;
 	background-color: #CCC;
+	
 	border: 1px solid #767676;
 	border-radius: 3px;
+	
 	padding: 2px 7px;
+	
+	text-align: center;
+}
+
+.button:hover {
+	background-color: #EEE;
+	
+	border: 1px solid #767676;
+	border-radius: 3px;
+	
+	padding: 2px 7px;
+	
 	text-align: center;
 }
 
 .container {
 	display: flex;
 	width: 150px;
+	
 	justify-content: center;
 	align-items: center;
+	
 	text-align: center;
-	background-color:;
 }
 
 .container_ {

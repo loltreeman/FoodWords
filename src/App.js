@@ -2,7 +2,6 @@ import './App.css';
 import Button from './buttons/Button.js';
 
 import { useState } from 'react';
-import { cloneElement } from 'react';
 
 var ingredients = [
 	'Cabbage',
@@ -35,11 +34,11 @@ export default function MainApp() {
 		} else {			
 			newList =  list.filter(ingredient => ingredient !== ingredients[count])
 		}
-		setList(added)
+		setList(newList)
 	}
 	
 	const display = list.map(ingredient =>
-		<div className="div">
+		<div className="div_">
 		<li> 
 			{ ingredient }
 		</li>
@@ -53,6 +52,7 @@ export default function MainApp() {
 		<div className="div">
 		
 			<h1> Food Words </h1>
+			
 			<div className="div_">
 				<span className="container">
 					<Button text="<" className="button" onClick={() => changeIngredient(-1)}/>
