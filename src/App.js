@@ -28,14 +28,14 @@ export default function MainApp() {
 		}
 	}
 	
-	function changeList(add) {		
-		if (!add) {
-			let added = list.concat(ingredients[count])
-			setList(added)
+	function changeList(added) {	
+		let newList;
+		if (!added) { // checks if ingredient has been added, if so, remove it, if not, add it.
+			newList = list.concat(ingredients[count])
 		} else {			
-			let removed = list.filter(ingredient => ingredient !== ingredients[count])
-			setList(removed)
+			newList =  list.filter(ingredient => ingredient !== ingredients[count])
 		}
+		setList(added)
 	}
 	
 	const display = list.map(ingredient =>
@@ -51,22 +51,26 @@ export default function MainApp() {
 	return (
 	<>
 		<div className="div">
+		
 			<h1> Food Words </h1>
 			<div className="div_">
 				<span className="container">
 					<Button text="<" className="button" onClick={() => changeIngredient(-1)}/>
 					<span className="container"> { ingredients[count] } </span>
 					<Button text=">" className="button" onClick={() => changeIngredient(1)}/>
-				</span> <br/> <br/>
+				</span>
+				<br/> <br/>
 			</div>
 			
 			<Button text={ in_list ? "Remove" : "Add"} className="button" onClick={() => changeList(in_list) }/>
 			<br/> <br/>
 			
 			{list.length > 0 && (<h3> Added Ingredients </h3>)} 
+			
 			<ol className="ol">
 			{ display }
 			</ol>
+			
 		</div>
 	</>
 	);
