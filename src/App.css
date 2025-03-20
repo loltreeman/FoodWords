@@ -8,6 +8,14 @@
 	text-align: center;
 }
 
+.div_ {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	width: 100%;
+	text-align: center;
+}
+
 .span {
 	text-align: center;
 	display: inline-block;
@@ -29,5 +37,21 @@
 	border: 1px solid #767676;
 	border-radius: 3px;
 	padding: 2px 7px;
+	text-align: center;
+}
+
+.container {
+	display: flex;
+	width: 150px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.container_ {
+	display: flex;
+	width: 75px;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
 }

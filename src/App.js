@@ -4,7 +4,7 @@ import Button from './buttons/Button.js';
 import { useState } from 'react';
 import { cloneElement } from 'react';
 
-var ingredients_list = [
+var ingredients = [
 	'Cabbage',
 	'Garlic',
 	'Apple',
@@ -12,15 +12,8 @@ var ingredients_list = [
 	'Water'
 	]
 
-var ingredients = []
-
-for (var key = 0; key < ingredients_list.length; key++) {
-	ingredients[key] = {name: ingredients_list[key], id: key, display: false}
-}
-
 export default function MainApp() {	
 	const [count, setCount] = useState(0)
-	const [values, setValues] = useState(ingredients)
 	const [list, setList] = useState([])
 	
 	function changeIngredient(steps) {
@@ -33,22 +26,16 @@ export default function MainApp() {
 		} else {
 			setCount(temp_count)
 		}
-		
-		setValues(ingredients)
 	}
 	
 	function changeList(add) {		
 		if (!add) {
-			let added = list.concat(ingredients[count].name)
+			let added = list.concat(ingredients[count])
 			setList(added)
-			
-			ingredients[count].display = true
 		} else {			
-			let removed = list.filter(ingredient => ingredient !== ingredients[count].name)
+			let removed = list.filter(ingredient => ingredient !== ingredients[count])
 			setList(removed)
-			ingredients[count].display = false
 		}
-		setValues(ingredients)
 	}
 	
 	const display = list.map(ingredient =>
@@ -59,17 +46,22 @@ export default function MainApp() {
 		</div>
 	)
 	
+	let in_list = list.filter(ingredient => ingredients[count] == ingredient).length == 1
+	
 	return (
 	<>
 		<div className="div">
 			<h1> Food Words </h1>
-			<span className="span">
-				<Button text="<" className="button" onClick={() => changeIngredient(-1)}/>
-				<span className="a"> { values[count].name } </span>
-				<Button text=">" className="button" onClick={() => changeIngredient(1)}/>
-			</span> <br/> <br/>
+			<div className="div_">
+				<span className="container">
+					<Button text="<" className="button" onClick={() => changeIngredient(-1)}/>
+					<span className="container"> { ingredients[count] } </span>
+					<Button text=">" className="button" onClick={() => changeIngredient(1)}/>
+				</span> <br/> <br/>
+			</div>
 			
-			<Button text={values[count].display ? "Remove" : "Add"} className="button" onClick={() => changeList(values[count].display) }/> <br/> <br/>
+			<Button text={ in_list ? "Remove" : "Add"} className="button" onClick={() => changeList(in_list) }/>
+			<br/> <br/>
 			
 			{list.length > 0 && (<h3> Added Ingredients </h3>)} 
 			<ol className="ol">
