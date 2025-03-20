@@ -48,10 +48,10 @@ export default function MainApp() {
 	let in_list = list.filter(ingredient => ingredients[count] == ingredient).length == 1
 	
 	return (
-	<>
+	<>	
 		<div className="div">
 		
-			<h1> Food Words </h1>
+			<h2> Food Words </h2>
 			
 			<div className="div_">
 				<span className="container">
