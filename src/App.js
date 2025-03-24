@@ -136,7 +136,7 @@ export default function MainApp() {
               <div
                 key={i}
                 className="card"
-                style={{ "--rating": 100 - recipe.missing.length * 20 }}
+                style={{ "--rating": 100 - recipe.missing.length * 20, "--amount": recipe.ingredients.length}}
               >
                 <div className="icon">🍽️</div>
                 <div className="title">{recipe.name}</div>
