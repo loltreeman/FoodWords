@@ -8,23 +8,52 @@ export default function MainApp() {
   const [markedIngredients, setMarkedIngredients] = useState([]); 
 
   const localRecipes = [
-    {
-      name: "Chicken Adobo",
-      ingredients: ["Chicken", "Soy Sauce", "Vinegar", "Garlic", "Bay Leaves", "Peppercorns"],
-      youtube: "https://www.youtube.com/watch?v=FWjp0ieChzs"
-    },
-    {
-      name: "Sinigang na Baboy",
-      ingredients: ["Pork", "Tamarind", "Radish", "Eggplant", "Okra", "Water Spinach"],
-      youtube: "https://www.youtube.com/watch?v=kIoY0li1ABk&list=PLe2Zq7EovWR0_bfLXbDp_TIynlUaDnV2p"
-    },
-    {
-      name: "Lechon Kawali",
-      ingredients: ["Pork Belly", "Salt", "Pepper", "Garlic", "Bay Leaves"],
-      youtube: "https://www.youtube.com/watch?v=Df8uYWP5hEU"
-    }
+	{
+	  name: "Chicken Adobo",
+	  ingredients: ["Chicken", "Soy Sauce", "Vinegar", "Garlic", "Bay Leaves", "Peppercorns"],
+	  youtube: "https://www.youtube.com/watch?v=FWjp0ieChzs"
+	},
+	{
+	  name: "Sinigang na Baboy",
+	  ingredients: ["Pork", "Tamarind", "Radish", "Eggplant", "Okra", "Water Spinach"],
+	  youtube: "https://www.youtube.com/watch?v=kIoY0li1ABk&list=PLe2Zq7EovWR0_bfLXbDp_TIynlUaDnV2p"
+	},
+	{
+	  name: "Lechon Kawali",
+	  ingredients: ["Pork Belly", "Salt", "Pepper", "Garlic", "Bay Leaves"],
+	  youtube: "https://www.youtube.com/watch?v=Df8uYWP5hEU"
+	},
+	{
+	  name: "Kare-Kare",
+	  ingredients: ["Oxtail", "Peanut Butter", "Eggplant", "Bitter Melon", "Banana Flower", "Shrimp Paste"],
+	  youtube: "https://www.youtube.com/watch?v=YvTs4on5aVM"
+	},
+	{
+	  name: "Pancit Canton",
+	  ingredients: ["Egg Noodles", "Chicken", "Shrimp", "Cabbage", "Carrot", "Soy Sauce"],
+	  youtube: "https://www.youtube.com/watch?v=7oUYagLDNx0"
+	},
+	{
+	  name: "Apple Pie",
+	  ingredients: ["Apple", "Flour", "Sugar", "Butter", "Cinnamon"],
+	  youtube: "https://www.youtube.com/watch?v=UIimSEqeN8s"
+	},
+	{
+	  name: "Tomato Soup",
+	  ingredients: ["Tomato", "Garlic", "Basil", "Water", "Salt"],
+	  youtube: "https://www.youtube.com/watch?v=szjZ3vqwyXE"
+	},
+	{
+	  name: "Cheeseburger",
+	  ingredients: ["Beef Patty", "Bun", "Cheddar Cheese", "Lettuce", "Tomato", "Pickles", "Onion", "Ketchup"],
+	  youtube: "https://www.youtube.com/watch?v=nq9WnmCGoFQ"
+	},
+	{
+	  name: "Mac and Cheese",
+	  ingredients: ["Macaroni", "Cheese", "Milk", "Butter", "Flour", "Breadcrumbs"],
+	  youtube: "https://www.youtube.com/watch?v=FUeyrEN14Rk"
+	}
   ];
-
   const recipes = localRecipes;
 
   function addIngredient() {
