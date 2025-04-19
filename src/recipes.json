@@ -1,0 +1,18 @@
+[
+    {
+      "name": "Cabbage Stir Fry",
+      "ingredients": ["Cabbage", "Garlic", "Soy Sauce", "Oil"],
+      "instructions": "Chop cabbage and garlic. Heat oil in a pan, add ingredients, stir fry, and drizzle with soy sauce."
+    },
+    {
+      "name": "Apple Salad",
+      "ingredients": ["Apple", "Lettuce", "Walnuts", "Dressing"],
+      "instructions": "Slice the apple and mix with lettuce and walnuts. Drizzle with your favorite dressing."
+    },
+    {
+      "name": "Tomato Soup",
+      "ingredients": ["Tomato", "Garlic", "Basil", "Water", "Salt"],
+      "instructions": "Simmer chopped tomatoes with garlic and basil in water. Blend until smooth and season with salt."
+    }
+  ]
+  
