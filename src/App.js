@@ -102,38 +102,34 @@ export default function MainApp() {
         </div>
       </div>
 
-      <div>
-        <h3>Possible Recipes</h3>
-        {generateRecipes().length === 0 ? (
-          <p>No matching recipes. Try adding more ingredients!</p>
-        ) : (
-          <div className="recipes-container">
-            {generateRecipes().map((recipe, i) => (
-              <div
-                key={i}
-                className="card"
-                style={{ "--rating": 100 - recipe.missing.length * 20, "--amount": recipe.ingredients.length}}
-              >
-                <div className="icon">🍽️</div>
-                <div className="title">{recipe.name}</div>
-                <p className="description">
-                  {recipe.missing.length > 0
-                    ? <>Missing: {recipe.missing.join(', ')}</>
-                    : "All ingredients available!"}
-                </p>
-                <div className="rating"></div>
-                {recipe.youtube && (
-                  <a
-                    href={recipe.youtube}
-                    className="link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    See the recipe
-                  </a>
-                )}
-              </div>
-            ))}
+      <div className="card p-4 mb-4 shadow-sm hero-card">
+        <p className="text-center text-muted">Your digital companion for your culinary inspirations!</p>
+        <div className="input-group my-3">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Add an ingredient"
+            value={newIngredient}
+            onChange={(e) => setNewIngredient(e.target.value)}
+            onKeyDown={(e) => { if (e.key === 'Enter') addIngredient(); }}
+          />
+          <button className="btn btn-primary" onClick={addIngredient}>Add Ingredient</button>
+        </div>
+        {ingredientsList.length > 0 && (
+          <div className="text-center">
+            <h5>Your Ingredients</h5>
+            <div className="d-flex flex-wrap justify-content-center gap-2">
+              {ingredientsList.map((ing, index) => (
+                <span
+                  key={index}
+                  className="badge bg-secondary ingredient-badge"
+                  onClick={() => removeIngredient(ing)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {ing}
+                </span>
+              ))}
+            </div>
           </div>
         )}
       </div>
